@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halaman Pendaftaran</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(Signup.png);
+            background-size: cover;
+        }
+        .container {
+            max-width: 400px;
+            width: 100%;
+            height: 590px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: calc(100% - 12px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: 0;
+            background: #4e9e2a;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: green;
+        }
+        .aggrement{
+            color: gray;
+            margin: 10px;
+        }
+        .title{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 50px;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            color: green;
+            font-size: 18px;
+        }
+        .subtitle{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .have{
+            text-align: center;
+        }
+    </style>
+
+<script>   
+    function validatePassword(event) {
+            const password = document.getElementsByName('password')[0].value;
+            const confirm_password = document.getElementsByName('confirm_password')[0].value;
+
+            if (password !== confirm_password) {
+                alert('Password and Confirm Password do not match.');
+            } else {
+                alert('Daftar tersimpan');
+            }
+        }
+</script>
+
+</head>
+<body>
+
+<div class="container">
+    <h2 class="title">Daftar</h2>
+    <h2 class="subtitle">Aeriel Kislew Isai Hutabarat</h2>
+    <form onsubmit="validatePassword(event)">
+        <div>username</div>
+        <input type="text" name="username"  required><br>
+        <div>email</div>
+        <input type="email" name="email"  required><br>
+        <div>kata sandi</div>
+        <input type="password" name="password"  required><br>
+        <div>konfirmasi kata sandi</div>
+        <input type="password" name="confirm_password"  required><br>
+        <div class="aggrement">
+            Dengan mengklik Daftar, kamu menyetujui ketentuan, kebijakan privasi, dan Kebijakan Cookie kami. Kami dapat mengirimkan pemberitahuan SMS yang dapat dihentikan kapan saja
+        </div>
+        <input type="submit" value="Daftar">
+
+    </form>
+    <p class="have">Sudah punya akun? <a href="login.html">Masuk</a></p>
+
+</div>
+
+</body>
+</html>
